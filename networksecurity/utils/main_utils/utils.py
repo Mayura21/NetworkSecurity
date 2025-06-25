@@ -13,3 +13,15 @@ def read_yaml_file(file_path: str) -> dict:
             return yaml.safe_load(yaml_file)
     except Exception as e:
         raise NetworkSecurityException(e, sys)
+
+
+def write_yaml_file(fiel_path: str, content: object, replace: bool=False) -> None:
+    try:
+        if replace:
+            if os.path.exists(fiel_path):
+                os.remove(fiel_path)
+        os.makedirs(os.path.dirname(fiel_path), exist_ok=True)
+        with open(fiel_path, "w") as file:
+            yaml.dump(content, file)
+    except Exception as e:
+        raise NetworkSecurityException(e, sys)
