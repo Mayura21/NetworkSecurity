@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Mayura/Programming/Github_Projects/DataScience/E2E_ML_AWS_Azure/NetworkSecurity/mlruns/0/models/m-9eaf0847c7084cdd823d54b3f1710d09/artifacts
+creation_timestamp: 1751113094759
+experiment_id: '0'
+last_updated_timestamp: 1751113099483
+model_id: m-9eaf0847c7084cdd823d54b3f1710d09
+model_type: null
+name: model
+source_run_id: 296db7800bfc4ac79d37126b91a2fb62
+status: 2
+status_message: null
