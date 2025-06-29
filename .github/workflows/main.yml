@@ -64,6 +64,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Debug ECR env
+        run: |
+          echo "ECR_REGISTRY=${ECR_REGISTRY}"
+          echo "ECR_REPOSITORY=${ECR_REPOSITORY}"
+      
+      - name: Ensure ECR Repository Exists
+        run: |
+          aws ecr describe-repositories --repository-names $ECR_REPOSITORY --region ${{ secrets.AWS_REGION }}
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
